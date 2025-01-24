@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$max-width: 1400px;
+$font-family: "Nunito", sans-serif;
+$peso-cuerpo: 400;
+$size-cuerpo: 1rem;
+$cuerpo: #{$peso-cuerpo} #{$size-cuerpo} $font-family;
+$peso-titulos: 700;
+$h1: $peso-titulos $size-cuerpo*3 $font-family;
+$h2: $peso-titulos $size-cuerpo*2 $font-family;
+$h3: $peso-titulos $size-cuerpo*1.5 $font-family;
+
+
+html{
+
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+body{
+    font: $cuerpo;
+}
+
+
+h{
+    &1{
+        font: $h1
+    }
+    &2{
+        font: $h2
+    }
+
+    &3{
+        font: $h3
+    }
+}
+
+header{
+    img{
+        width: 10%;
+        float: left;
+    }
+    text-align: center;
+
+    h1, h2{
+        width: 90%;
+        
+    }
+
+    a{
+        text-decoration: none;
+        
+    }
+}

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+html {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  font: 400 1rem "Nunito", sans-serif;
+}
+
+h1 {
+  font: 700 3rem "Nunito", sans-serif;
+}
+h2 {
+  font: 700 2rem "Nunito", sans-serif;
+}
+h3 {
+  font: 700 1.5rem "Nunito", sans-serif;
+}
+
+header {
+  text-align: center;
+}
+header img {
+  width: 10%;
+  float: left;
+}
+header h1, header h2 {
+  width: 90%;
+}
+header a {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
