@@ -1,0 +1,17 @@
+
+nav {
+
+    background-color: $color1;
+    text-align: center;
+    color: $colortexto;
+    padding: 0.1 em;
+    margin: 0.5em 0 0 0;
+    text-transform: uppercase;
+
+    ul{
+        list-style: none;
+        margin: $default-margin;
+        @include menuhorizontal;
+
+    }
+}

@@ -1,0 +1,43 @@
+@mixin reset-list{
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+@mixin menuvertical{
+    
+    ul{
+        @include reset-list;
+        li{
+            a{
+                display: block;
+                &:hover{
+                    background-color: aqua;
+                }
+            }
+        }
+    }
+}
+
+@mixin menuhorizontal{
+
+    ul{
+        @include reset-list;
+        li{
+            display: inline-block;
+            margin: $default-margin;
+            padding: 0.2em;
+            font:$menu;
+
+            a{
+                color: $colortexto;
+                text-decoration: none;
+                &:hover{
+                    color: $color2;
+                }
+            }
+        }
+    }
+}
