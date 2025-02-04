@@ -8,10 +8,10 @@ nav {
     margin: 0.5em 0 0 0;
     text-transform: uppercase;
 
-    ul{
+    
         list-style: none;
         margin: $default-margin;
         @include menuhorizontal;
 
-    }
+    
 }

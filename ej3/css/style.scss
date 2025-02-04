@@ -1,8 +1,82 @@
-@import 'menu';
 @import 'variables';
+@import 'menu';
 @import 'menuhorizontal';
 
 html{
     background-color: $color2;
     color: $colortexto;
+    font: $cuerpo;
+
 }
+
+@mixin avatar($size, $circulo:false){
+
+    width: $size;
+    height: $size;
+    background-color: $color1;
+    @if $circulo {
+        border-radius: $size / 2;
+    }
+}
+
+.cuadrado{
+    @include avatar(100px);
+}
+
+.redondo{
+    @include avatar(100px, $circulo:true);
+}
+
+$light-background: #f2ece4;
+$light-text: #036;
+
+$dark-background: #6b717f;
+$dark-text: #d2e1dd;
+
+@mixin color-tema($light-theme:true){
+
+    @if $light-theme{
+        background-color: $light-background;
+        color: $light-text;
+    } @else {
+        background-color: $dark-background;
+        color: $dark-text;
+    }
+}
+
+.banner{
+
+    @include color-tema($light-theme:true);
+    body.dark &{
+        @include color-tema($light-theme:false);
+    }
+}
+
+
+@function color-aleatorio(){
+    @return rgb(random(256)-1, random(256)-1, random(256)-1);
+}
+
+@function color-eleccion($color){
+    @if $color == 'rojo' {
+        @return rgb(random(256)-1, 0, 0);
+    } @else if $color == 'verde' {
+        @return rgb(0, random(256)-1, 0);
+    } @else if $color == 'azul' {
+        @return rgb(0, 0, random(256)-1);
+    } @else {
+        @return color-aleatorio();
+    }
+}
+
+$base-color:$light-text;
+
+@for $i from 1 through 4 {
+    li:nth-child(#{$i}){
+        //background-color: lighten($base-color, $i * 5%);
+        background-color: color-eleccion(azul);
+    }
+}
+
+
+

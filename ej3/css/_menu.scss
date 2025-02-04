@@ -25,6 +25,9 @@
 
     ul{
         @include reset-list;
+        margin: $default-margin;
+        padding: $default-padding;
+        font:$menu;
         li{
             display: inline-block;
             margin: $default-margin;

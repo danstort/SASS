@@ -1,0 +1,58 @@
+// VARIABLES SIMPLES ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+$font-sizes: (
+    "cuerpo": 1rem,
+    "h3": 150%,
+    "h2": 200%,
+    "h1": 300%,
+    "nav ul li": 110%,
+    "footer p": 80%
+);
+$font-weights: (
+    "light": 300,
+    "regular": 400,
+    "bold": 700
+);
+$font-family: "Nunito", sans-serif;
+
+$max-width: 1400px;
+$default-margin: 0;
+$default-padding: 0;
+
+$default-foreground: rgb(30, 30, 30);
+$default-background: #eee;
+
+
+// VARIABLES COMPUESTAS ////////////////////////////////////////////////////////////////////////////////////////////////
+
+$cuerpo: map-get($font-weights, "regular") map-get($font-sizes, "cuerpo") $font-family;
+
+
+// VARIABLES Y FUNCIONES PROPIAS ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@function color_h1(){
+    @return rgb(random(256)-1, 0, 0);
+}
+
+$color_h1: color_h1();
+
+@function color_h2(){
+    @return rgb(0, random(256)-1, 0);
+}
+
+$color_h2: color_h2();
+
+@mixin fuente {
+    font: map-get($font-weights, "bold") map-get($font-sizes, quote(#{&})) $font-family;
+}
+
+@function colorRandom(){
+    @return rgb(random(256)-1, random(256)-1, random(256)-1, 0.5);
+    //0.5 es la opacidad
+}
+
+@for $i from 1 through 6 {
+    article:nth-child(#{$i}){
+        background-color: colorRandom(); 
+    }
+}
