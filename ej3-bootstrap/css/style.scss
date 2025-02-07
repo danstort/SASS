@@ -55,6 +55,7 @@ header {
 
 /* NAV ****************************************************************************************************************/
 
+
 @mixin navegacion{
     background-color: $default-background;
     padding: 0.1em;
@@ -62,23 +63,29 @@ header {
     text-align: center;
     text-transform: uppercase;
 
+} 
+
+@mixin nav-ul{
+    list-style: none;
+    margin: $default-margin;
+}
+
+@mixin nav-li{
+    display: inline-block;
+    margin: $default-margin;
+    padding: 0.2em;
+    font: map-get($font-weights, "bold") map-get($font-sizes, quote(#{&})) $font-family;
+}
+
+nav {
+    
+    @include navegacion;
+
     ul {
-        list-style: none;
-        margin: $default-margin;
+        @include nav-ul;
 
         li {
-            display: inline-block;
-            margin: $default-margin;
-            padding: 0.2em;
-            font: map-get($font-weights, "bold") map-get($font-sizes, quote(#{&})) $font-family;
-
-            
-        }
-    }
-
-}
-nav {
-    @include navegacion;
+            @include nav-li;
 
             a {
                 font-weight: map-get($font-weights, "regular");
@@ -88,6 +95,8 @@ nav {
                     font-weight: map-get($font-weights, "bold");
                 }
             }
+        }
+    }
        
     
 }
@@ -134,11 +143,37 @@ footer {
     
 }
 
-@media screen and (max-width: 768px) {
+.logo{
+    width: 100%;
+    
+}
+
+.sin {
+    padding: 0px;
+}
+
+
+
+@media screen and (max-width: 576px) {
     header{
         img {
             width: 20%;
             float: none;
+        }
+    }
+
+    .borde{
+        border: none;
+    }
+
+    nav{
+        margin: 0;
+
+        ul{
+
+            li{
+                display: block;
+            }
         }
     }
 }

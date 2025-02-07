@@ -1,26 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
 article:nth-child(1) {
-  background-color: rgba(56, 193, 80, 0.5);
+  background-color: rgba(101, 47, 175, 0.5);
 }
 
 article:nth-child(2) {
-  background-color: rgba(141, 125, 162, 0.5);
+  background-color: rgba(91, 119, 109, 0.5);
 }
 
 article:nth-child(3) {
-  background-color: rgba(234, 162, 96, 0.5);
+  background-color: rgba(248, 214, 176, 0.5);
 }
 
 article:nth-child(4) {
-  background-color: rgba(35, 92, 254, 0.5);
+  background-color: rgba(13, 234, 47, 0.5);
 }
 
 article:nth-child(5) {
-  background-color: rgba(239, 168, 239, 0.5);
+  background-color: rgba(22, 158, 160, 0.5);
 }
 
 article:nth-child(6) {
-  background-color: rgba(58, 152, 195, 0.5);
+  background-color: rgba(9, 199, 21, 0.5);
 }
 
 /* ESTILOS GLOBALES ***************************************************************************************************/
@@ -61,7 +61,7 @@ header h1 {
   color: rgb(15, 0, 0);
 }
 header h2 {
-  color: rgb(0, 253, 0);
+  color: rgb(0, 21, 0);
 }
 
 /* NAV ****************************************************************************************************************/
@@ -82,10 +82,10 @@ nav ul li {
   padding: 0.2em;
   font: 700 110% "Nunito", sans-serif;
 }
-nav a {
+nav ul li a {
   font-weight: 400;
 }
-nav a:hover {
+nav ul li a:hover {
   text-decoration: underline;
   font-weight: 700;
 }
@@ -123,9 +123,26 @@ footer p a:hover {
   border: 3px solid white;
 }
 
-@media screen and (max-width: 768px) {
+.logo {
+  width: 100%;
+}
+
+.sin {
+  padding: 0px;
+}
+
+@media screen and (max-width: 576px) {
   header img {
     width: 20%;
     float: none;
+  }
+  .borde {
+    border: none;
+  }
+  nav {
+    margin: 0;
+  }
+  nav ul li {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
